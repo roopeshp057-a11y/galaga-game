@@ -82,10 +82,20 @@ galaga/
 
 ---
 
+## Student Details & Submission
+
+- **Student Name:** ROOPESH
+- **SRN:** PES1UG24AM393
+- **Serial Number:** 31
+- **Section:** 5-G
+- **Assigned Repository:** `https://github.com/SETAPESU26/31_galaga`
+- **GitHub Repository:** [https://github.com/roopeshp057-a11y/galaga-game](https://github.com/roopeshp057-a11y/galaga-game)
+
+---
+
 ## Submission Checklist
 
-Submission is only the following three things:
-
-- [] A 10-second video of gameplay **before** your changes, showing the bug/broken behavior
-- [] A 10-second video of gameplay **after** your changes, showing the bug fixed and the new features working
-- [] The Chat/LLM used page link, with the complete chat history
+- [x] A 10-second video of gameplay **before** your changes (`Lab-4/video_before_fix.mp4`), showing the bug/broken behavior
+- [x] A 10-second video of gameplay **after** your changes (`Lab-4/video_after_fix.mp4`), showing the bug fixed and the new features working
+- [x] The Chat/LLM history documentation (`Lab-4/CHAT_HISTORY.md` and `Lab-4/LAB4_REPORT.md`)
+- [x] All 4 tasks committed with separate commits and pushed to GitHub

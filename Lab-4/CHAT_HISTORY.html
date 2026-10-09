@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lab 4 Vibe Coding - Chat History & Report</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a202c; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+  h1, h2, h3 { color: #2d3748; }
+  .header { border-bottom: 2px solid #e2e8f0; padding-bottom: 16px; margin-bottom: 24px; }
+  .badge { display: inline-block; background: #edf2f7; color: #4a5568; padding: 4px 8px; border-radius: 4px; font-size: 14px; font-weight: 600; }
+  .box { background: #f7fafc; border-left: 4px solid #4299e1; padding: 12px 16px; margin: 16px 0; border-radius: 0 4px 4px 0; }
+  pre { background: #1a202c; color: #f7fafc; padding: 14px; border-radius: 6px; overflow-x: auto; font-size: 13px; }
+  code { font-family: Consolas, Monaco, monospace; }
+  .prompt { background: #ebf8ff; border-left: 4px solid #3182ce; padding: 10px 14px; margin: 12px 0; border-radius: 0 4px 4px 0; font-style: italic; }
+  .response { margin-bottom: 24px; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th, td { border: 1px solid #e2e8f0; padding: 10px; text-align: left; }
+  th { background: #edf2f7; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Lab 4: Vibe Coding — Submission Report</h1>
+  <p>
+    <strong>Student Name:</strong> ROOPESH | 
+    <strong>SRN:</strong> PES1UG24AM393 | 
+    <strong>Section:</strong> 5-G | 
+    <strong>Serial #:</strong> 31
+  </p>
+  <p>
+    <strong>Assigned Repo:</strong> <code>https://github.com/SETAPESU26/31_galaga</code><br>
+    <strong>GitHub Repo:</strong> <a href="https://github.com/roopeshp057-a11y/galaga-game">https://github.com/roopeshp057-a11y/galaga-game</a>
+  </p>
+</div>
+
+<h2>1. Executive Summary of Tasks & Solutions</h2>
+<table>
+  <tr><th>Task</th><th>Objective</th><th>Solution Summary</th><th>Commit</th></tr>
+  <tr>
+    <td><strong>Task 1</strong></td>
+    <td>Fix Bézier entry/dive curve bug</td>
+    <td>Fixed missing <code>* t</code> exponent on the 3rd Bézier term: <code>3 * u * t * t * p2</code></td>
+    <td><code>Fix cubic Bézier curve calculation bug in bezier() (Task 1)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Task 2</strong></td>
+    <td>Implement <code>enemy_tint(kind)</code></td>
+    <td>Implemented custom vibrant arcade palette: Neon Emerald for boss, Coral Red for red, Electric Cyan for blue</td>
+    <td><code>Implement enemy_tint() for custom enemy coloration (Task 2)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Task 3</strong></td>
+    <td>Implement <code>on_wave_start(wave)</code></td>
+    <td>Added stage announcement banner (<code>STAGE X - GET READY</code>) and animated timer on wave start</td>
+    <td><code>Implement on_wave_start() with wave banner display (Task 3)</code></td>
+  </tr>
+  <tr>
+    <td><strong>Task 4</strong></td>
+    <td>Implement <code>shield_charges(wave)</code></td>
+    <td>Granted 1 hit-absorbing shield per 3 waves, with glowing cyan shield ring and HUD counter</td>
+    <td><code>Implement shield_charges() with visual shield indicator (Task 4)</code></td>
+  </tr>
+</table>
+
+<h2>2. Video Deliverables</h2>
+<ul>
+  <li><strong>Before Fix Video:</strong> <code>Lab-4/video_before_fix.mp4</code> (10 seconds showing the Bézier curve overshoot)</li>
+  <li><strong>After Fix Video:</strong> <code>Lab-4/video_after_fix.mp4</code> (10 seconds showing fixed motion, enemy colors, stage banner, and shield)</li>
+</ul>
+
+<h2>3. LLM Pair Programming Log</h2>
+
+<div class="prompt">User: "To clone the Galaga Pygame project from GitHub into your own GitHub repository, follow these steps... my github id roopeshp057-a11y"</div>
+<div class="response">Assistant: Generated customized Git commands for user <code>roopeshp057-a11y</code> to clone, re-point origin, and initialize the empty repository.</div>
+
+<div class="prompt">User: "ok do it"</div>
+<div class="response">Assistant: Cloned the assigned repository <code>SETAPESU26/31_galaga</code>, updated the remote origin to <code>roopeshp057-a11y/galaga-game</code>, and instructed repository creation on GitHub.</div>
+
+<div class="prompt">User: "done"</div>
+<div class="response">Assistant: Executed <code>git push -u origin main</code> to initialize the user's remote repository.</div>
+
+<div class="prompt">User: "@[Section_G_Vibe_Coding_Assignments.xlsx] @[Lab_4_VibeCoding_Student_handout.pdf] do the complete steps and give me the solution and video before and after"</div>
+<div class="response">
+  Assistant:
+  <ul>
+    <li>Identified student assignment: Serial #31, ROOPESH, PES1UG24AM393, Section 5-G.</li>
+    <li>Installed Pygame and recording dependencies.</li>
+    <li>Recorded 10-second "BEFORE" video capturing the broken Bézier curve behavior.</li>
+    <li>Implemented all 4 tasks sequentially with separate, clear Git commits.</li>
+    <li>Recorded 10-second "AFTER" video demonstrating the bug fixes and all 3 completed features.</li>
+    <li>Organized all deliverables inside the <code>Lab-4</code> directory and pushed to GitHub.</li>
+  </ul>
+</div>
+
+</body>
+</html>
