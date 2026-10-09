@@ -16,7 +16,12 @@ def bezier(p0, p1, p2, p3, t):
 
 def enemy_tint(kind):
     """Return an (r, g, b) colour override for an enemy kind, or None for the default."""
-    pass
+    tints = {
+        "boss": (60, 240, 160),    # Vibrant emerald neon
+        "red": (255, 75, 95),      # Bright arcade crimson
+        "blue": (75, 175, 255),    # Electric azure cyan
+    }
+    return tints.get(kind)
 
 
 def on_wave_start(wave):
