@@ -24,9 +24,13 @@ def enemy_tint(kind):
     return tints.get(kind)
 
 
+WAVE_BANNER = {"text": "", "timer": 0.0}
+
+
 def on_wave_start(wave):
     """Called at the start of every wave; add banners, speed-ups, or palette swaps here."""
-    pass
+    WAVE_BANNER["text"] = f"STAGE {wave} - GET READY"
+    WAVE_BANNER["timer"] = 2.0
 
 
 def shield_charges(wave):
@@ -135,6 +139,8 @@ class Game:
             self.ships = 2
 
     def update(self, dt, keys):
+        if WAVE_BANNER["timer"] > 0:
+            WAVE_BANNER["timer"] = max(0.0, WAVE_BANNER["timer"] - dt)
         if self.state != "play":
             return
         self.time += dt
@@ -211,6 +217,9 @@ class Game:
                 pygame.draw.polygon(screen, (220, 60, 60), [(sx - 14, PLAYER_Y + 12), (sx - 6, PLAYER_Y - 2), (sx - 4, PLAYER_Y + 12)])
         hud = font.render(f"Score {self.score}  Lives {self.lives}  Wave {self.wave}  R = reset", True, (240, 240, 240))
         screen.blit(hud, (10, 8))
+        if WAVE_BANNER["timer"] > 0 and self.state == "play":
+            banner_surf = font.render(WAVE_BANNER["text"], True, (255, 230, 80))
+            screen.blit(banner_surf, banner_surf.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 30)))
         if self.state == "lose":
             label = font.render("GAME OVER - Press R", True, (255, 255, 120))
             screen.blit(label, label.get_rect(center=(WIDTH // 2, HEIGHT // 2)))
